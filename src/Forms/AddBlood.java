@@ -90,7 +90,7 @@ public class AddBlood extends javax.swing.JFrame {
 
         dateTF.setToolTipText("Enter Date of Donation");
 
-        cancelButton.setText("Cancel");
+        cancelButton.setText("Back");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelButtonActionPerformed(evt);
@@ -135,8 +135,8 @@ public class AddBlood extends javax.swing.JFrame {
                                 .addComponent(ageTF)
                                 .addComponent(contactTF)
                                 .addComponent(addressTF)
-                                .addComponent(bloodTF, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(dateTF, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)))
+                                .addComponent(dateTF, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                                .addComponent(bloodTF, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(32, 32, 32))))
         );
         layout.setVerticalGroup(

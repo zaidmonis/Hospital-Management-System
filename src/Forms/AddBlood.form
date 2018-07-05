@@ -55,8 +55,8 @@
                               <Component id="ageTF" max="32767" attributes="0"/>
                               <Component id="contactTF" max="32767" attributes="0"/>
                               <Component id="addressTF" max="32767" attributes="0"/>
-                              <Component id="bloodTF" min="-2" pref="52" max="-2" attributes="0"/>
                               <Component id="dateTF" alignment="0" pref="215" max="32767" attributes="0"/>
+                              <Component id="bloodTF" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
@@ -184,7 +184,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="cancelButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cancel"/>
+        <Property name="text" type="java.lang.String" value="Back"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelButtonActionPerformed"/>
