@@ -19,22 +19,24 @@ import net.proteanit.sql.DbUtils;
  *
  * @author zaid
  */
-public class displaySearch extends javax.swing.JFrame {
+public class DisplaySearch extends javax.swing.JFrame {
 
     /**
-     * Creates new form displaySearch
+     * Creates new form DisplaySearch
      */
     ResultSet rs;
-    public displaySearch() {
+    String str;
+    public DisplaySearch() {
         initComponents();
+        str = "";
         //this.setExtendedState(Display.MAXIMIZED_BOTH);
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         
         
-        Statement stm = DBConnect.createConnection("HospitalDB.db");
+        /*Statement stm = DBConnect.createConnection("HospitalDB.db");
         String text = searchText.getText();
         
-        String sql = "SELECT * FROM RECORD WHERE Name = '" +text + "'";
+        String sql = "SELECT * FROM RECORD WHERE Name LIKE '%" +text + "%'";
         System.out.println(sql);
         ResultSet rs = null;
         try {
@@ -43,7 +45,7 @@ public class displaySearch extends javax.swing.JFrame {
             Logger.getLogger(MainScreen.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        searchTable.setModel(DbUtils.resultSetToTableModel(rs));
+        searchTable.setModel(DbUtils.resultSetToTableModel(rs));*/
         //searchTable.setModel(DbUtils.resultSetToTableModel(rs));
     }
 
@@ -116,7 +118,7 @@ public class displaySearch extends javax.swing.JFrame {
         Statement stm = DBConnect.createConnection("HospitalDB.db");
         String text = searchText.getText();
         
-        String sql = "SELECT * FROM RECORD WHERE Name = '" +text + "'";
+        String sql = "SELECT * FROM RECORD WHERE Name LIKE '%" +text + "%'";
         System.out.println(sql);
         ResultSet rs = null;
         try {
@@ -146,20 +148,21 @@ public class displaySearch extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(displaySearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplaySearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(displaySearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplaySearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(displaySearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplaySearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(displaySearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplaySearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new displaySearch().setVisible(true);
+                new DisplaySearch().setVisible(true);
             }
         });
     }

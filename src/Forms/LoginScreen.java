@@ -47,6 +47,7 @@ public class LoginScreen extends javax.swing.JFrame{
             stm.executeUpdate("CREATE TABLE IF NOT EXISTS DOCTORRECORD(empID INT, Name TEXT(20), [Date of Birth] TEXT(20), Contact TEXT(20), Salary INT)");
             stm.executeUpdate("CREATE TABLE IF NOT EXISTS RECORD(ID INT, Name TEXT(20), [Date of Birth] TEXT(20), Contact TEXT(20), [Blood Group] TEXT(3))");
             stm.executeUpdate("CREATE TABLE IF NOT EXISTS BloodRecord(name TEXT(20), age INT, contact TEXT(20), address TEXT(80), date TEXT(20), [blood group] Text(3))");
+            stm.close();
         } catch (SQLException ex) {
             Logger.getLogger(LoginScreen.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -52,6 +52,7 @@ public class MainScreen extends javax.swing.JFrame {
         logoutButton = new javax.swing.JButton();
         searchButton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        manageButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +105,13 @@ public class MainScreen extends javax.swing.JFrame {
             }
         });
 
+        manageButton.setText("Manage Users");
+        manageButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -111,8 +119,9 @@ public class MainScreen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(108, 108, 108)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(manageButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(showPatientButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(addPatientButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(showDoctorButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -137,10 +146,12 @@ public class MainScreen extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 29, Short.MAX_VALUE)
+                        .addGap(0, 123, Short.MAX_VALUE)
                         .addComponent(logoutButton))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(manageButton)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
 
@@ -170,7 +181,7 @@ public class MainScreen extends javax.swing.JFrame {
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
-        displaySearch dis = new displaySearch();
+        DisplaySearch dis = new DisplaySearch();
         dis.setVisible(true);
         
     }//GEN-LAST:event_searchButtonActionPerformed
@@ -192,6 +203,12 @@ public class MainScreen extends javax.swing.JFrame {
         BloodBank bloodBank = new BloodBank();
         bloodBank.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void manageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageButtonActionPerformed
+        // TODO add your handling code here:
+        ManageUsers manageUsers = new ManageUsers();
+        manageUsers.setVisible(true);
+    }//GEN-LAST:event_manageButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -234,6 +251,7 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JButton addPatientButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton logoutButton;
+    private javax.swing.JButton manageButton;
     private javax.swing.JButton searchButton;
     private javax.swing.JButton showDoctorButton;
     private javax.swing.JButton showPatientButton;

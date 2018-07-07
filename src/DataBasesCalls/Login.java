@@ -46,6 +46,7 @@ public class Login {
                System.out.println("User = " +user +"password= " +pass);
                if(p.equals(pass) && u.equals(user)){
                    System.out.println("True");
+                   stm.close();
                    return true;
                }
            }
